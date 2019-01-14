@@ -43,6 +43,14 @@ class TestSort{
         return array;
     }
     
+    func getOrderedKeys(length:Int) -> Array<Int> {
+        var array = [Int]()
+        for i in 0..<length{
+            array.append(i);
+        }
+        return array;
+    }
+    
     func printTime(sortTypeName:String, timeBegin:Date,timeFinish:Date)  {
         let timeStr = String(format: "%.4f", timeFinish.timeIntervalSince(timeBegin));
         print("\(sortTypeName)-->cost Time \(timeStr)s");
@@ -129,6 +137,33 @@ class TestSort{
         for number in copyNumbers{
             print(number);
         }
-        
+    }
+    
+    func testBinarySearchTree()  {
+        let keys = getRandomArray(length: 10, rangeLeft: 10, rangeRight: 100);
+        let array = getOrderedKeys(length: 10);
+        let binarTree = BinarySearchTree<Int,Int>()
+        //插入
+        for i in 0..<keys.count{
+            let key = keys[i];
+            let value = array[i];
+            binarTree.insert(key: key, value: value);
+        }
+        //搜索
+        let value = binarTree.search(key: 4);
+        print("搜索“4”的value值为:\(String(describing: value))")
+        //遍历
+        //
+        binarTree.orderSearch();
+        print("前序遍历")
+        binarTree.preSearch()
+        print("找最大值\(String(describing: binarTree.maxMumNumber()))")
+        print("找最小值\(String(describing: binarTree.miniMumNumber()))")
+        print("删除最小值")
+        binarTree.deleteMiniNumber()
+        print("删除最大值")
+        binarTree.deleteMaxNUmber()
+        print("再次遍历")
+        binarTree.orderSearch();
     }
 }

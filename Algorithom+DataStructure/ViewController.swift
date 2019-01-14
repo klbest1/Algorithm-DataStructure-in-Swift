@@ -13,29 +13,29 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let testSort = TestSort();
-        
+        UIButton
         // Do any additional setup after loading the view, typically from a nib.
         let st = Student(name: "A", score: 87);
         let st1 = Student(name: "B", score: 83);
         let st2 = Student(name: "A", score: 75);
         let st3 = Student(name: "A", score: 57);
-        var students = [st,st1,st2,st3];
-        
-        let sortObject = SelectSort();
-        let insertSortObject = InsertSort();
-        let bubleSortObject = BubbleSort();
-        let mergeSortObject = MergeSort();
-        let heapSortObject = Heap();
-        let quickSortObject = QuickSort();
-        let exerciseMergeObject = ExerciseMergeSort()
-        
-        var testNumbers = testSort.getRandomArray(length: 1000, rangeLeft: 0, rangeRight: 500);
-        var copyTestNumbers = [] + testNumbers;
-        var copyTestNumbers1 = [] + testNumbers;
-        var copyTestNumbers2 = [] + testNumbers;
-        var copyTestNumbers3 = [] + testNumbers;
-        var copyTestNumbers4 = [] + testNumbers;
-        var copyTestNumbers5 = [] + testNumbers;
+//        var students = [st,st1,st2,st3];
+//        
+//        let sortObject = SelectSort();
+//        let insertSortObject = InsertSort();
+//        let bubleSortObject = BubbleSort();
+//        let mergeSortObject = MergeSort();
+//        let heapSortObject = Heap();
+//        let quickSortObject = QuickSort();
+//        let exerciseMergeObject = ExerciseMergeSort()
+//        
+//        var testNumbers = testSort.getRandomArray(length: 1000, rangeLeft: 0, rangeRight: 500);
+//        var copyTestNumbers = [] + testNumbers;
+//        var copyTestNumbers1 = [] + testNumbers;
+//        var copyTestNumbers2 = [] + testNumbers;
+//        var copyTestNumbers3 = [] + testNumbers;
+//        var copyTestNumbers4 = [] + testNumbers;
+//        var copyTestNumbers5 = [] + testNumbers;
 //
 //      testSort.testSort(sortTypeName: "SelectSort",sortObject:sortObject, array: &students);
 //      testSort.testSort(sortTypeName: "SelectSort",sortObject:sortObject, array: &testNumbers);
@@ -51,7 +51,8 @@ class ViewController: UIViewController {
 //        let binarySearch = BinarySearch<Int>()
 //        let numerIndex = binarySearch.binarySearchFloor(array: &testNumbers, v: 300, L: 0, R: testNumbers.count-1)
 //        print("查找结果:\(numerIndex)");
-        
+        //测试二分搜索树
+        testSort.testBinarySearchTree()
         //
          //测试递归执行顺序
          //        getresult(len: 1);
@@ -66,13 +67,18 @@ class ViewController: UIViewController {
 //        let exeSelect = ExerciseForSelectSort<Int>();
 //        let exeInsertSort = ExerciseForSelectSort<Int>();
 //        let exeMergeSort = ExerciseForMergeSort();
-        let exeQuickSort = ExerciseQuickSort();
-        var testExeNumbers = testSort.getRandomArray(length: 100, rangeLeft: 0, rangeRight: 500);
+//        let exeQuickSort = ExerciseQuickSort();
+//        var testExeNumbers = testSort.getRandomArray(length: 100, rangeLeft: 0, rangeRight: 500);
 //        testSort.testSort(sortTypeName: "选择排序", sortObject: exeSelect, array: &testExeNumbers);
 //        testSort.testSort(sortTypeName: "插入排序", sortObject: exeInsertSort, array: &testExeNumbers);
 //        testSort.testSort(sortTypeName: "归并排序", sortObject: exeMergeSort, array: &testExeNumbers);
-        testSort.testSort(sortTypeName: "快速排序", sortObject: exeQuickSort, array: &testExeNumbers)
-        testFunc();
+//        testSort.testSort(sortTypeName: "快速排序", sortObject: exeQuickSort, array: &testExeNumbers)
+//        testFunc();
+        
+        
+        //测试LeetCode
+        let testLeetCode = TestLeetCode()
+        testLeetCode.test();
     }
     
 

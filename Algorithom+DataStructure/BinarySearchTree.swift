@@ -8,24 +8,26 @@
 
 import UIKit
 
+//把TreeNode放入BinarySearchTree 申明 会无提示的crash.......
+private class  TreeNode<Key:Comparable,Value:Comparable>{
+    var leftChild:TreeNode?
+    var  rightChild:TreeNode?
+    var value:Value
+    var key:Key
+    
+    init(key:Key,value:Value) {
+        self.key = key;
+        self.value = value;
+    }
+}
+
 class BinarySearchTree<Key:Comparable,Value:Comparable>: NSObject {
 
+   
     private var count:Int = 0
-    private var root:TreeNode?
+    private  var root:TreeNode<Key,Value>?
 
-    private class  TreeNode{
-        var leftChild:TreeNode?
-        var rightChild:TreeNode?
-        var value:Value
-        var key:Key
-    
-        init(key:Key,value:Value) {
-            self.key = key;
-            self.value = value;
-        }
-    }
-    
-    private func insert(treeRoot:TreeNode?,key:Key,value:Value)->TreeNode?{
+    private func insert(treeRoot:TreeNode<Key,Value>?,key:Key,value:Value)-> TreeNode<Key,Value>?{
       
         if let treeroot = treeRoot {
             if treeroot.key == key {
@@ -37,12 +39,13 @@ class BinarySearchTree<Key:Comparable,Value:Comparable>: NSObject {
             }
         }else{
             count += 1;
-            return TreeNode(key: key, value: value);
+            let node = TreeNode(key: key, value: value);
+            return node;
         }
         return treeRoot;
     }
     
-    private func contain(node:TreeNode?, key:Key)->Bool{
+    private func contain(node:TreeNode<Key,Value>?, key:Key)->Bool{
         if node == nil {
             return false;
         }
@@ -56,7 +59,7 @@ class BinarySearchTree<Key:Comparable,Value:Comparable>: NSObject {
         }
     }
     
-    private func search(node:TreeNode? , key:Key)->Value?{
+    private func search(node:TreeNode<Key,Value>? , key:Key)->Value?{
         if node == nil {
             return nil;
         }
@@ -72,47 +75,103 @@ class BinarySearchTree<Key:Comparable,Value:Comparable>: NSObject {
 
     }
     
-    private func preSearch(node:TreeNode?){
+    /*......深度优先....*/
+    private func preOrder(node:TreeNode<Key,Value>?){
         if node == nil {
             return;
         }
         
-        print("前序位置\(node!.value)");
-        preSearch(node: node!.leftChild);
-        preSearch(node: node!.rightChild);
+        print("前序位置\(node!.key)");
+        preOrder(node: node!.leftChild);
+        preOrder(node: node!.rightChild);
     }
     
-    private func midleSearch(node:TreeNode?){
+    private func midleOrder(node:TreeNode<Key,Value>?){
         if node == nil {
             return;
         }
         
-        preSearch(node: node!.leftChild);
-        print("中序位置\(node!.value)");
-        preSearch(node: node!.rightChild);
+        midleOrder(node: node!.leftChild);
+        print("中序位置\(node!.key)");
+        midleOrder(node: node!.rightChild);
     }
     
-    private func postSearch(node:TreeNode?){
+    private func postOrder(node:TreeNode<Key,Value>?){
         if node == nil {
             return;
         }
         
-        preSearch(node: node!.leftChild);
-        preSearch(node: node!.rightChild);
-        print("后序序位置\(node!.value)");
+        postOrder(node: node!.leftChild);
+        postOrder(node: node!.rightChild);
+        print("后序序位置\(node!.key)");
+    }
+    /*-------------------------*/
+    /*------广度优先-------*/
+    private func levelOrder(){
+        let queue:Queue = Queue<TreeNode<Key,Value>>()
+        queue.append(value: root!);
+        
+        while queue.count != 0 {
+            let node  = queue.popFront()
+            print("层级遍历:\(String(describing: node?.key))")
+            if let leftChild = node?.leftChild {
+                queue.append(value: leftChild)
+            }
+            if let rightChild = node?.rightChild {
+                queue.append(value: rightChild);
+            }
+        }
     }
     
-    private func postSearchDestroy(node:inout TreeNode?){
+    private func postOrderDestroy(node:inout TreeNode<Key,Value>?){
         if node == nil {
             return;
         }
         
-        preSearch(node: node!.leftChild);
-        preSearch(node: node!.rightChild);
+        postOrderDestroy(node: &node!.leftChild);
+        postOrderDestroy(node: &node!.rightChild);
         print("后序序位置\(node!.value)");
         node = nil;
     }
+
+    //最大值
+    private func getMaxMumNode(treeNode:TreeNode<Key,Value>)->TreeNode<Key,Value>{
+        if treeNode.rightChild == nil {
+            return treeNode
+        }
+        return getMaxMumNode(treeNode: treeNode.rightChild!)
+    }
+    //最小值
+    private func getMinimumNode(treeNode:TreeNode<Key,Value>)->TreeNode<Key,Value>{
+        if treeNode.leftChild == nil{
+            return treeNode
+        }
+        return getMinimumNode(treeNode: treeNode.leftChild!)
+    }
+    //删除最小值
+    private func deleteMiniNode(node:inout TreeNode<Key,Value>?)->TreeNode<Key,Value>?{
+        if node!.leftChild == nil {
+            let rightNode = node!.rightChild;
+            node = nil
+            return rightNode;
+        }
+        
+        node!.leftChild =  deleteMiniNode(node: &node!.leftChild)
+        return  node;
+    }
+    //删除最大值
+    private func deleteMaxNode(node:inout TreeNode<Key,Value>?)-> TreeNode<Key,Value>?{
+        if node!.rightChild == nil{
+            let leftNode = node!.leftChild
+            node = nil;
+            return leftNode
+        }
+        
+        node!.rightChild =  deleteMaxNode(node: &node!.rightChild)
+        return node;
+    }
     
+    //MARK: - 公有方法
     public func isEmpty() -> Bool {
         return count==0 ? true:false;
     }
@@ -122,7 +181,7 @@ class BinarySearchTree<Key:Comparable,Value:Comparable>: NSObject {
     }
     
     public func insert(key:Key,value:Value){
-        root =  insert(treeRoot: root, key: key, value: value)
+       root =  insert(treeRoot: root, key: key, value: value)
     }
     
     public func contain(key:Key)->Bool{
@@ -134,10 +193,44 @@ class BinarySearchTree<Key:Comparable,Value:Comparable>: NSObject {
     }
     
     public func preSearch(){
-        preSearch(node: root)
+        preOrder(node: root)
+    }
+    
+    public func orderSearch(){
+        levelOrder();
+    }
+    
+    public func maxMumNumber()->Key?{
+        guard root != nil else {
+            return nil
+        }
+        let maxMumNode = getMaxMumNode(treeNode: root!);
+        return maxMumNode.key
+    }
+    
+    public func miniMumNumber()->Key?{
+        guard root != nil else {
+            return nil
+        }
+        let mimiMumNode = getMinimumNode(treeNode: root!);
+        return mimiMumNode.key
+    }
+    
+    public func deleteMiniNumber(){
+        guard root != nil else {
+            return
+        }
+        root = deleteMiniNode(node: &root)
+    }
+    
+    public func deleteMaxNUmber(){
+        guard root != nil else {
+            return
+        }
+        root = deleteMaxNode(node: &root)
     }
     
     public func destoryBST(){
-        postSearchDestroy(node: &root)
+        postOrderDestroy(node: &root)
     }
 }

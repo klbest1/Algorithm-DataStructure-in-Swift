@@ -25,6 +25,9 @@
 		A08EC4C61EBFF139009CAF18 /* InsertSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08EC4C51EBFF139009CAF18 /* InsertSort.swift */; };
 		A08EC4C81EC01A0A009CAF18 /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08EC4C71EC01A0A009CAF18 /* BubbleSort.swift */; };
 		A0926E221EFA196C00D1B9C3 /* CImpletedAlgrithom.c in Sources */ = {isa = PBXBuildFile; fileRef = A0926E201EFA196C00D1B9C3 /* CImpletedAlgrithom.c */; };
+		A0A93D761F03AD310081C6F9 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A93D751F03AD310081C6F9 /* Queue.swift */; };
+		A0C9F7D01F0A1C2D00D63B7C /* LeetCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9F7CF1F0A1C2D00D63B7C /* LeetCode.swift */; };
+		A0D3BAA41F17316700001351 /* TestLeetCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D3BAA31F17316700001351 /* TestLeetCode.swift */; };
 		A0E1E8DE1EFB67EB0065FC4C /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E1E8DD1EFB67EB0065FC4C /* BinarySearch.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,9 @@
 		A0926E1F1EFA18FD00D1B9C3 /* -Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "-Bridge-Header.h"; sourceTree = "<group>"; };
 		A0926E201EFA196C00D1B9C3 /* CImpletedAlgrithom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CImpletedAlgrithom.c; sourceTree = "<group>"; };
 		A0926E211EFA196C00D1B9C3 /* CImpletedAlgrithom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CImpletedAlgrithom.h; sourceTree = "<group>"; };
+		A0A93D751F03AD310081C6F9 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		A0C9F7CF1F0A1C2D00D63B7C /* LeetCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeetCode.swift; sourceTree = "<group>"; };
+		A0D3BAA31F17316700001351 /* TestLeetCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLeetCode.swift; sourceTree = "<group>"; };
 		A0E1E8DD1EFB67EB0065FC4C /* BinarySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +112,9 @@
 				A0926E211EFA196C00D1B9C3 /* CImpletedAlgrithom.h */,
 				A0E1E8DD1EFB67EB0065FC4C /* BinarySearch.swift */,
 				A01626471EFCBDEB001BC294 /* BinarySearchTree.swift */,
+				A0A93D751F03AD310081C6F9 /* Queue.swift */,
+				A0C9F7CF1F0A1C2D00D63B7C /* LeetCode.swift */,
+				A0D3BAA31F17316700001351 /* TestLeetCode.swift */,
 			);
 			path = "Algorithom+DataStructure";
 			sourceTree = "<group>";
@@ -190,6 +199,7 @@
 				A058539F1ED7C5DA008AD520 /* QuickSort.swift in Sources */,
 				A0926E221EFA196C00D1B9C3 /* CImpletedAlgrithom.c in Sources */,
 				A0585F6B1EC17BD200838E98 /* MergeSort.swift in Sources */,
+				A0D3BAA41F17316700001351 /* TestLeetCode.swift in Sources */,
 				A035530C1ED5226800FA12CD /* Exercise.swift in Sources */,
 				A08EC4C61EBFF139009CAF18 /* InsertSort.swift in Sources */,
 				A00098CE1EBEB53600E46A14 /* SelectSort.swift in Sources */,
@@ -197,6 +207,8 @@
 				A08EC4C81EC01A0A009CAF18 /* BubbleSort.swift in Sources */,
 				A01626481EFCBDEB001BC294 /* BinarySearchTree.swift in Sources */,
 				A00098BC1EBEB4ED00E46A14 /* AppDelegate.swift in Sources */,
+				A0C9F7D01F0A1C2D00D63B7C /* LeetCode.swift in Sources */,
+				A0A93D761F03AD310081C6F9 /* Queue.swift in Sources */,
 				A048101B1ECC1B760053A1FA /* HeapIndex.swift in Sources */,
 				A0E1E8DE1EFB67EB0065FC4C /* BinarySearch.swift in Sources */,
 			);
