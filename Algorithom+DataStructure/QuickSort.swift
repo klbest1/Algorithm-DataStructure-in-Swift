@@ -25,7 +25,7 @@ class QuickSort: BaseSort {
     func partion<T:Comparable>(array:inout [T],indexBegin:Int,indexEnd:Int) -> Int {
         let randomIndex = Int(arc4random_uniform(UInt32(indexEnd - indexBegin + 1))) + indexBegin
         if randomIndex != indexBegin {
-            swap(&array[indexBegin], &array[randomIndex]);
+            array.swapAt(indexBegin, randomIndex);
         }
         
         let fistNumber = array[indexBegin];
@@ -49,7 +49,7 @@ class QuickSort: BaseSort {
     func partion1<T:Comparable>(array:inout [T],indexBegin:Int,indexEnd:Int) -> Int {
         let randomIndex = Int(arc4random_uniform(UInt32(indexEnd - indexBegin + 1))) + indexBegin
         if randomIndex != indexBegin {
-            swap(&array[indexBegin], &array[randomIndex]);
+            array.swapAt(indexBegin, randomIndex);
         }
         
         let fistNumber = array[indexBegin];

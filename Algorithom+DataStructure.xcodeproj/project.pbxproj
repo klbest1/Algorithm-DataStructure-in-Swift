@@ -19,9 +19,11 @@
 		A01626481EFCBDEB001BC294 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01626471EFCBDEB001BC294 /* BinarySearchTree.swift */; };
 		A02F91BC1EC40ED600A30AFD /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02F91BB1EC40ED600A30AFD /* LinkedList.swift */; };
 		A035530C1ED5226800FA12CD /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A035530B1ED5226800FA12CD /* Exercise.swift */; };
+		A039F06724397986006142BF /* HeapPriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A039F06624397986006142BF /* HeapPriorityQueue.swift */; };
 		A048101B1ECC1B760053A1FA /* HeapIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A048101A1ECC1B760053A1FA /* HeapIndex.swift */; };
 		A058539F1ED7C5DA008AD520 /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058539E1ED7C5DA008AD520 /* QuickSort.swift */; };
 		A0585F6B1EC17BD200838E98 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0585F6A1EC17BD200838E98 /* MergeSort.swift */; };
+		A089DABB243046FA005E09FA /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A089DABA243046FA005E09FA /* Stack.swift */; };
 		A08EC4C61EBFF139009CAF18 /* InsertSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08EC4C51EBFF139009CAF18 /* InsertSort.swift */; };
 		A08EC4C81EC01A0A009CAF18 /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08EC4C71EC01A0A009CAF18 /* BubbleSort.swift */; };
 		A0926E221EFA196C00D1B9C3 /* CImpletedAlgrithom.c in Sources */ = {isa = PBXBuildFile; fileRef = A0926E201EFA196C00D1B9C3 /* CImpletedAlgrithom.c */; };
@@ -46,9 +48,11 @@
 		A01626471EFCBDEB001BC294 /* BinarySearchTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		A02F91BB1EC40ED600A30AFD /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		A035530B1ED5226800FA12CD /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		A039F06624397986006142BF /* HeapPriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapPriorityQueue.swift; sourceTree = "<group>"; };
 		A048101A1ECC1B760053A1FA /* HeapIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeapIndex.swift; sourceTree = "<group>"; };
 		A058539E1ED7C5DA008AD520 /* QuickSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
 		A0585F6A1EC17BD200838E98 /* MergeSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
+		A089DABA243046FA005E09FA /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		A08EC4C51EBFF139009CAF18 /* InsertSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertSort.swift; sourceTree = "<group>"; };
 		A08EC4C71EC01A0A009CAF18 /* BubbleSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
 		A0926E1F1EFA18FD00D1B9C3 /* -Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "-Bridge-Header.h"; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				A0585F6A1EC17BD200838E98 /* MergeSort.swift */,
 				A02F91BB1EC40ED600A30AFD /* LinkedList.swift */,
 				A01032DD1EC939040013508A /* Heap.swift */,
+				A039F06624397986006142BF /* HeapPriorityQueue.swift */,
+				A089DABA243046FA005E09FA /* Stack.swift */,
 				A048101A1ECC1B760053A1FA /* HeapIndex.swift */,
 				A035530B1ED5226800FA12CD /* Exercise.swift */,
 				A058539E1ED7C5DA008AD520 /* QuickSort.swift */,
@@ -146,7 +152,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "lin kang";
 				TargetAttributes = {
 					A00098B71EBEB4EC00E46A14 = {
@@ -158,7 +164,7 @@
 			};
 			buildConfigurationList = A00098B31EBEB4EC00E46A14 /* Build configuration list for PBXProject "Algorithom+DataStructure" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -207,7 +213,9 @@
 				A08EC4C81EC01A0A009CAF18 /* BubbleSort.swift in Sources */,
 				A01626481EFCBDEB001BC294 /* BinarySearchTree.swift in Sources */,
 				A00098BC1EBEB4ED00E46A14 /* AppDelegate.swift in Sources */,
+				A039F06724397986006142BF /* HeapPriorityQueue.swift in Sources */,
 				A0C9F7D01F0A1C2D00D63B7C /* LeetCode.swift in Sources */,
+				A089DABB243046FA005E09FA /* Stack.swift in Sources */,
 				A0A93D761F03AD310081C6F9 /* Queue.swift in Sources */,
 				A048101B1ECC1B760053A1FA /* HeapIndex.swift in Sources */,
 				A0E1E8DE1EFB67EB0065FC4C /* BinarySearch.swift in Sources */,
@@ -240,20 +248,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -290,20 +307,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -339,7 +365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "kl.Algorithom-DataStructure";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Algorithom+DataStructure/-Bridge-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -353,7 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "kl.Algorithom-DataStructure";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Algorithom+DataStructure/-Bridge-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

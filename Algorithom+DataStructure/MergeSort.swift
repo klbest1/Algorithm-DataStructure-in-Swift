@@ -86,74 +86,74 @@ class MergeSort: BaseSort {
         }
     }
     
-    func mergeLinkedList<T>( linkList:LinkedList<T>,L:Int,Middle:Int,R:Int){
-        guard R > L ,Middle >= L,linkList.count > R  else {
-            return
-        }
-        
-        
-        
-//        tempList.nodeDescription();
-//       print("-----------")
-        do {
-            //复制一份链表
-            let tempList = LinkedList<T>();
-            var current = try linkList.nodeAtIndex(index: L);
-            var tempCurrent = current;
-            for _ in L...R{
-                tempList.append(value: current!.value);
-                current = current?.next;
-            }
-            
-            var currentLeft = try tempList.nodeAtIndex(index:0 )
-            var currentRight = try tempList.nodeAtIndex(index: Middle + 1 - L )
-            let nodeRightStart = currentRight;
-            
-            current = tempCurrent;
-            tempCurrent = nil
-            //排序
-            for _ in L...R{
-                if currentRight == nil {
-                    current!.value = currentLeft!.value
-                    current = current?.next
-                    currentLeft = currentLeft!.next;
-                    //此处 next 被置空了，我日
-                }else if currentLeft === nodeRightStart {
-                    
-                    current!.value = currentRight!.value;
-                    current = current?.next
-                    currentRight = currentRight!.next;
-                }else if currentLeft!.value <= currentRight!.value {
-                    current!.value = currentLeft!.value
-                    currentLeft = currentLeft!.next;
-                    current = current!.next
-                }else{
-                    current!.value = currentRight!.value;
-                    current = current!.next;
-                    currentRight = currentRight!.next;
-                }
-            }
-
-        } catch  LinkListErro.outOfRange {
-            print("out of range");
-        } catch{
-            print("fuck");
-        }
-        
-            }
+//    func mergeLinkedList<T>( linkList:LinkedList<T>,L:Int,Middle:Int,R:Int){
+//        guard R > L ,Middle >= L,linkList.count > R  else {
+//            return
+//        }
+//
+//
+//
+////        tempList.nodeDescription();
+////       print("-----------")
+//        do {
+//            //复制一份链表
+//            let tempList = LinkedList<T>();
+//            var current = try linkList.nodeAtIndex(index: L);
+//            var tempCurrent = current;
+//            for _ in L...R{
+//                tempList.append(value: current!.value);
+//                current = current?.next;
+//            }
+//
+//            var currentLeft = try tempList.nodeAtIndex(index:0 )
+//            var currentRight = try tempList.nodeAtIndex(index: Middle + 1 - L )
+//            let nodeRightStart = currentRight;
+//
+//            current = tempCurrent;
+//            tempCurrent = nil
+//            //排序
+//            for _ in L...R{
+//                if currentRight == nil {
+//                    current!.value = currentLeft!.value
+//                    current = current?.next
+//                    currentLeft = currentLeft!.next;
+//                    //此处 next 被置空了，我日
+//                }else if currentLeft === nodeRightStart {
+//
+//                    current!.value = currentRight!.value;
+//                    current = current?.next
+//                    currentRight = currentRight!.next;
+//                }else if currentLeft!.value <= currentRight!.value {
+//                    current!.value = currentLeft!.value
+//                    currentLeft = currentLeft!.next;
+//                    current = current!.next
+//                }else{
+//                    current!.value = currentRight!.value;
+//                    current = current!.next;
+//                    currentRight = currentRight!.next;
+//                }
+//            }
+//
+//        } catch  LinkListErro.outOfRange {
+//            print("out of range");
+//        } catch{
+//            print("fuck");
+//        }
+//
+//            }
     
-    func sortLinkList<T>(linkList:LinkedList<T>)  {
-        var size = 1;
-        let n = linkList.count;
-        while  size < n {
-            var i = 0;
-            while i + size - 1 < n {
-                mergeLinkedList(linkList: linkList, L: i, Middle: i + size - 1, R: min(i + size + size-1, n-1));
-                i += size + size ;
-            }
-            size += size;
-        }
-    }
+//    func sortLinkList<T>(linkList:LinkedList<T>)  {
+//        var size = 1;
+//        let n = linkList.count;
+//        while  size < n {
+//            var i = 0;
+//            while i + size - 1 < n {
+//                mergeLinkedList(linkList: linkList, L: i, Middle: i + size - 1, R: min(i + size + size-1, n-1));
+//                i += size + size ;
+//            }
+//            size += size;
+//        }
+//    }
     
     func sortArrayReversed<T:Comparable>(array:inout [T])  {
         var size = 1;

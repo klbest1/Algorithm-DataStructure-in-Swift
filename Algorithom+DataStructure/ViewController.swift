@@ -13,12 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let testSort = TestSort();
-        UIButton
         // Do any additional setup after loading the view, typically from a nib.
-        let st = Student(name: "A", score: 87);
-        let st1 = Student(name: "B", score: 83);
-        let st2 = Student(name: "A", score: 75);
-        let st3 = Student(name: "A", score: 57);
+//        let st = Student(name: "A", score: 87);
+//        let st1 = Student(name: "B", score: 83);
+//        let st2 = Student(name: "A", score: 75);
+//        let st3 = Student(name: "A", score: 57);
 //        var students = [st,st1,st2,st3];
 //        
 //        let sortObject = SelectSort();
@@ -28,8 +27,15 @@ class ViewController: UIViewController {
 //        let heapSortObject = Heap();
 //        let quickSortObject = QuickSort();
 //        let exerciseMergeObject = ExerciseMergeSort()
-//        
-//        var testNumbers = testSort.getRandomArray(length: 1000, rangeLeft: 0, rangeRight: 500);
+//
+//        let priorityHeap = HeapPriorityQueue(capacity: 5);
+//        let testNumbers = testSort.getRandomArray(length: 5, rangeLeft: 0, rangeRight: 500);
+//        for number in testNumbers{
+//            let node = ListNode(number);
+//            priorityHeap.push(data: node);
+//        }
+//        priorityHeap.printHeap()
+        
 //        var copyTestNumbers = [] + testNumbers;
 //        var copyTestNumbers1 = [] + testNumbers;
 //        var copyTestNumbers2 = [] + testNumbers;
@@ -52,7 +58,7 @@ class ViewController: UIViewController {
 //        let numerIndex = binarySearch.binarySearchFloor(array: &testNumbers, v: 300, L: 0, R: testNumbers.count-1)
 //        print("查找结果:\(numerIndex)");
         //测试二分搜索树
-        testSort.testBinarySearchTree()
+//        testSort.testBinarySearchTree()
         //
          //测试递归执行顺序
          //        getresult(len: 1);

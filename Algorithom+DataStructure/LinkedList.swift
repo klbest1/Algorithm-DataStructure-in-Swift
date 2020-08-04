@@ -11,15 +11,15 @@ import UIKit
 //var 默认internal level ，整个程序APP都可以访问
 //链表，堆和栈。
 
-public class Node<T:Comparable> {
-    var value:T;
-    var next: Node<T>?
-    
-    init(value:T) {
-        self.value = value;
-    }
-    
-}
+//public class Node<T:Comparable> {
+//    var value:T;
+//    var next: Node<T>?
+//
+//    init(value:T) {
+//        self.value = value;
+//    }
+//
+//}
 
 //func <(lhs: Node<T: Comparable>, rhs: Node<T: Comparable>) -> Bool{
 //    return ;
@@ -31,14 +31,14 @@ enum LinkListErro:Error{
     case outOfRange
 }
 //要实现的方法:append,printing,objectAtIndex,removeAtIndex,
-public class LinkedList<T:Comparable> {
+public class LinkedList {
  
-    var head:Node<T>?
-    var tail:Node<T>?
+    var head:ListNode?
+    var tail:ListNode?
     var count:Int = 0;
 
-    public func append(value:T) {
-        let newNode = Node(value: value);
+    public func append(value:NSInteger) {
+        let newNode = ListNode(value);
         count +=  1;
         if let tailNode = tail {
             tailNode.next = newNode;
@@ -49,7 +49,7 @@ public class LinkedList<T:Comparable> {
         tail = newNode;
     }
     
-    public func nodeAtIndex(index:Int) throws -> Node<T>?{
+    public func nodeAtIndex(index:Int) throws -> ListNode?{
         guard index < count,index >= 0  else {
             return nil;
         }
@@ -90,17 +90,17 @@ public class LinkedList<T:Comparable> {
         temp = nil;
     }
     
-    public func nodeDescription(){
-        var current = head;
-        while current != nil {
-            print("value:\(current!.value)\n")
-            if let next = current!.next {
-                if next.value < current!.value {
-                    print("没有排好序！！")
-                    break;
-                }
-            }
-            current = current?.next;
-        }
-    }
+//    public func nodeDescription(){
+//        var current = head;
+//        while current != nil {
+//            print("value:\(current!.value)\n")
+//            if let next = current!.next {
+//                if next.value < current!.value {
+//                    print("没有排好序！！")
+//                    break;
+//                }
+//            }
+//            current = current?.next;
+//        }
+//    }
 }

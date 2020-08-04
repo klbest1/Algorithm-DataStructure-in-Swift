@@ -50,7 +50,7 @@ class Heap :BaseSort{
             if temp == parent {
                 return;
             }
-            swap(&array[parent], &array[temp]);
+            array.swapAt(parent, temp);
             parent = temp;
         }
     }
@@ -78,14 +78,14 @@ class Heap :BaseSort{
                 return;
             }
             
-            swap(&array[parent], &array[maxNumber]);
+            array.swapAt(parent, maxNumber);
             first = parent;
         }
     }
     
     func extractMax<T:Comparable>(array:inout [T]) {
         while count > 1 {
-            swap(&array[0], &array[count - 1])
+            array.swapAt(0, count - 1)
             count -= 1;
             shiftDown(&array, index: 0);
         }

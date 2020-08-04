@@ -38,7 +38,7 @@ class TestSort{
            let switchIndexFirst = Int(arc4random_uniform(UInt32(length/2)))
            let switchIndexSecond = Int(arc4random_uniform(UInt32(length/2))) + length/2
            
-            swap(&array[switchIndexFirst], &array[switchIndexSecond]);
+            array.swapAt(switchIndexFirst, switchIndexSecond);
         }
         return array;
     }
